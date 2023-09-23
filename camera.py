@@ -11,11 +11,10 @@ os.environ['QT_QPA_PLATFORM'] = 'xcb'
 camera_token = 'cd98db92'
 camera_paired = False
 
-vidcap = cv2.VideoCapture(0)
-
-
 
 def capture_image():
+  vidcap = cv2.VideoCapture(0)
+
   if vidcap.isOpened():
     ret, frame = vidcap.read()
     if ret:
